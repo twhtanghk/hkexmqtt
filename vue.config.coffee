@@ -14,15 +14,6 @@ module.exports =
       'MQTTURL'
       'MQTTTOPIC'
     ]
-    config.plugins.push new CompressionWebpackPlugin
-      deleteOriginalAssets: true
-      include: [
-        /\.ico$/
-        /\.html$/
-        /\.js$/
-        /\.css$/
-        /\.map$/
-      ]
     config.module.rules.push
       test: /\.coffee$/
       use: ['babel-loader', 'coffee-loader']
