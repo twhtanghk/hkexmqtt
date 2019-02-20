@@ -1,0 +1,55 @@
+{
+  "name": "hkexmqtt",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint"
+  },
+  "dependencies": {
+    "vue": "^2.5.22"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^3.4.0",
+    "@vue/cli-plugin-eslint": "^3.4.0",
+    "@vue/cli-service": "^3.4.0",
+    "babel-eslint": "^10.0.1",
+    "coffee-loader": "^0.9.0",
+    "coffeescript": "^2.3.2",
+    "compression-webpack-plugin": "^2.0.0",
+    "eslint": "^5.8.0",
+    "eslint-plugin-vue": "^5.0.0",
+    "http-server": "^0.11.1",
+    "jsOAuth2": "https://github.com/twhtanghk/jsOAuth2",
+    "mqtt": "^2.18.8",
+    "node-sass": "^4.11.0",
+    "sass-loader": "^7.1.0",
+    "vue-template-compiler": "^2.5.21",
+    "vuetify": "^1.5.1"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "eslint:recommended"
+    ],
+    "rules": {},
+    "parserOptions": {
+      "parser": "babel-eslint"
+    }
+  },
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {}
+    }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ]
+}
