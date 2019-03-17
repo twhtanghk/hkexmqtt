@@ -1,3 +1,3 @@
 # hkexmqtt
 
-[Demo](https://combinatronics.com/twhtanghk/hkexmqtt/browseruid/dist/index.html)
+[Demo](https://combinatronics.com/twhtanghk/hkexmqtt/browserguid/dist/index.html)
