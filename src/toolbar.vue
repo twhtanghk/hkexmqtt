@@ -13,6 +13,7 @@
 </template>
 
 <script lang='coffee'>
+guid = require 'browserguid'
 mqtt = require 'mqtt'
 {eventBus} = require('jsOAuth2/frontend/src/lib').default
 
@@ -23,7 +24,7 @@ export default
     connect: ->
       client = mqtt
         .connect process.env.MQTTURL,
-          clientId: 'name'
+          clientId: guid()
           username: @token
           clean: false
         .on 'connect', ->
