@@ -14,7 +14,7 @@
 
 <script lang='coffee'>
 guid = require 'browserguid'
-mqtt = require 'mqtt'
+mqtt = require 'stockmqtt'
 {eventBus} = require('jsOAuth2/frontend/src/lib').default
 
 export default
@@ -22,14 +22,7 @@ export default
     token: null
   methods:
     connect: ->
-      client = mqtt
-        .connect process.env.MQTTURL,
-          clientId: guid()
-          username: @token
-          clean: false
-        .on 'connect', ->
-          client.subscribe process.env.MQTTTOPIC, qos: 2
-          console.info 'connected'
+      client = mqtt user: @token
         .on 'message', (topic, msg) ->
           if topic == process.env.MQTTTOPIC
             eventBus.$emit 'hkex', msg
